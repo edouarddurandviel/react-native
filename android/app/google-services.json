@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "586134805330",
+    "firebase_url": "https://edouard-essai-1539613904998.firebaseio.com",
+    "project_id": "edouard-essai-1539613904998",
+    "storage_bucket": "edouard-essai-1539613904998.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586134805330:android:c003d096fcc74c1d50788b",
+        "android_client_info": {
+          "package_name": "com.reactnativeawesome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586134805330-1m0vki84jb40g76dmoib1jv15mq2fi12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reactnativeawesome",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "586134805330-hkmlce7is50eq9n1gp84jeu55unt8ti7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEF9xuZVbeAk_3B5zeOMvjYoJFidgDT9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586134805330-hkmlce7is50eq9n1gp84jeu55unt8ti7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
