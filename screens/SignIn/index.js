@@ -6,6 +6,7 @@ import React, {useState, useEffect} from 'react';
 import { View, Text, Image, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
 
 import { Col, Row, Grid } from '../../react-native-easy-grid';
+import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 
 import auth  from '@react-native-firebase/auth';
@@ -120,17 +121,17 @@ export default function SignInScreen({navigation}) {
                         </TouchableOpacity>
                       </Row>
 
-                      { user && user.emailVerified === true ? (
+                      { user && user.emailVerified === true &&
                         <Row style={styles.formRowGoogle}>
-                         { user.photoURL !== null ? (
+                         { user.photoURL !== null  &&
                               <Col size={1}><Image style={styles.images} source={{uri: user.photoURL }} /></Col>
-                          ) : (
-                          <Col size={1}><Text>rien</Text></Col> )}
+                         }
                           <Col size={4}><Text style={styles.googleName} onPress={() => navigation.navigate('UserDetailScreen')}>{user.displayName}</Text></Col>
                         </Row>
-                      ) : ( <Text style={styles.formTitle}>Rien</Text>) }
+                      }
                       <Row style={styles.formRow}>
-                          <Text style={styles.loginLink} onPress={() => navigation.navigate('LogInSreen')}>Login page</Text>
+                        <Icon style={styles.loginLinkIcon} name="chevron-back-outline" size={28} color="tomato" />
+                        <Text style={styles.loginLink} onPress={() => navigation.navigate('LogInSreen')}>Back to login page</Text>
                       </Row>
                     </Col>
                 </Row>

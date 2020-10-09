@@ -84,6 +84,17 @@ export default StyleSheet.create({
       borderRadius: 25,
     },
     loginLink: {
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      width: 200,
       color: COLORS.primary,
+      fontSize: 18,
+      height: 30,
+      lineHeight: 28,
+      padding: 0,
+      margin: 0,
+    },
+    loginLinkIcon: {
+      display: 'flex',
     },
   });
