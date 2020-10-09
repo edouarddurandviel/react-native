@@ -1,13 +1,11 @@
-/* eslint-disable no-undef */
 /* eslint-disable prettier/prettier */
-
 import 'react-native-gesture-handler';
-
 import React, {useState, useEffect} from 'react';
 import { Text, Image} from 'react-native';
+import auth from '@react-native-firebase/auth';
+
 import { Col, Row, Grid } from '../../react-native-easy-grid/index';
 import styles from './styles';
-import auth from '@react-native-firebase/auth';
 
 export default function UserDetailScreen({navigation}) {
 

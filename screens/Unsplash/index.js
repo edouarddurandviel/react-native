@@ -1,9 +1,7 @@
 /* eslint-disable prettier/prettier */
-
 import 'react-native-gesture-handler';
-
 import React, {Component} from 'react';
-import { View, StyleSheet, Text, Image, FlatList, ActivityIndicator} from 'react-native';
+import { View, Text, Image, FlatList, ActivityIndicator} from 'react-native';
 
 import styles from './styles';
 
@@ -12,7 +10,6 @@ class UnsplashGalery extends Component{
   constructor(props){
     super(props);
 
-    // picture list
     this.state = {
       loading: false,
       items: [],
@@ -41,10 +38,7 @@ class UnsplashGalery extends Component{
 
 
   componentDidMount() {
-
-    // init picture list
     this._initPictureList();
-
   }
 
 

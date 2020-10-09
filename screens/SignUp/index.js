@@ -1,10 +1,7 @@
-/* eslint-disable no-undef */
 /* eslint-disable prettier/prettier */
-
 import 'react-native-gesture-handler';
-
 import React, {useState, useEffect} from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity} from 'react-native';
 import { Col, Row, Grid } from '../../react-native-easy-grid/index';
 import auth from '@react-native-firebase/auth';
 

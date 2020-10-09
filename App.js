@@ -1,16 +1,12 @@
 /* eslint-disable prettier/prettier */
 import 'react-native-gesture-handler';
 import React from 'react';
-import {NavigationContainer, View} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 
 // Bottom nav
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
-
-// Navigation modules
-// import ListNavigation from './navs/ListNavigation';
-// import AccountNavigation from './navs/AccountNavigation';
 
 // pages
 import ListScreen from './screens/contacts/MemberList';
@@ -19,10 +15,7 @@ import LogInSreen from './screens/SignUp';
 import SignInScreen from './screens/SignIn';
 import UserDetailScreen from './screens/UserDetails';
 import UnsplashGalery from './screens/Unsplash';
-//import ChatScreen from './screens/chat/ChatScreen';
-import HooksExampe from './screens/chat_screens/index';
-//import styles from './screens/chat_screens/components/common/Loader/styles';
-
+import HooksExampe from './screens/chat-screens/index';
 
 
 export default function App() {

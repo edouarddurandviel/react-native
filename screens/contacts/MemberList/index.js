@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import 'react-native-gesture-handler';
-
 import React, {Component} from 'react';
 import { ActivityIndicator, FlatList, View, Text } from 'react-native';
 
@@ -54,20 +53,15 @@ componentDidMount() {
 
 }
 
-
-
 keyExtractor = (item, index) => index.toString()
-
 renderItem = ({ item }) => (
-
   <View style={styles.list}>
     <Text style={styles.listText} onPress={() => this.props.navigation.navigate('DetailScreen', {item})}>{item.name.first} {item.name.last}</Text>
   </View>
 )
 
 render (){
-
-  return ( 
+  return (
           (this.state.loading === true) ?
             <ActivityIndicator style={styles.container} animating={this.state.animating} size="small" color="#0000ff" /> :
             <View><FlatList

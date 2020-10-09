@@ -1,19 +1,13 @@
-/* eslint-disable no-undef */
 /* eslint-disable prettier/prettier */
-
 import 'react-native-gesture-handler';
 import React, {useState, useEffect} from 'react';
-import { View, Text, Image, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
+import auth  from '@react-native-firebase/auth';
+import { GoogleSignin } from '@react-native-community/google-signin';
 
 import { Col, Row, Grid } from '../../react-native-easy-grid';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
-
-import auth  from '@react-native-firebase/auth';
-import { GoogleSignin } from '@react-native-community/google-signin';
-
-
-
 
 export default function SignInScreen({navigation}) {
 
@@ -50,8 +44,8 @@ export default function SignInScreen({navigation}) {
     auth()
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
-        navigation.navigate('UserDetailScreen');
         setIsLoading(false);
+        navigation.navigate('UserDetailScreen');
       })
       .catch(error => {
         if (error.code === 'auth/email-already-in-use') {
@@ -111,7 +105,7 @@ export default function SignInScreen({navigation}) {
                               { !isLoading ? (
                                 <Text style={styles.signInButtonText}>Create account</Text>
                               ) : (
-                              <Text style={styles.signInButtonText}>Is loading...</Text>
+                                <Text style={styles.signInButtonText}>Is loading...</Text>
                               )}
                         </TouchableOpacity>
                       </Row>
@@ -120,12 +114,11 @@ export default function SignInScreen({navigation}) {
                           <Text style={styles.signInButtonText}>Google Sign In...</Text>
                         </TouchableOpacity>
                       </Row>
-
                       { user && user.emailVerified === true &&
                         <Row style={styles.formRowGoogle}>
-                         { user.photoURL !== null  &&
+                          { user.photoURL !== null  &&
                               <Col size={1}><Image style={styles.images} source={{uri: user.photoURL }} /></Col>
-                         }
+                          }
                           <Col size={4}><Text style={styles.googleName} onPress={() => navigation.navigate('UserDetailScreen')}>{user.displayName}</Text></Col>
                         </Row>
                       }
