@@ -69,6 +69,8 @@ export default function LogInScreen({navigation}) {
                 <Row style={styles.mainformRow}>
                     <Col>
                       <View><Text style={styles.formTitle}>LogIn</Text></View>
+                      <View><Text style={styles.formPwd}>email : user@user.com</Text></View>
+                      <View><Text style={styles.formPwd}>password : useruser</Text></View>
                       <Row style={styles.formRow}>
                         <TextInput
                           placeholder={'email'}
@@ -97,12 +99,10 @@ export default function LogInScreen({navigation}) {
                         <Text style={styles.registerLink} onPress={() => navigation.navigate('SignInScreen')}>Create an account</Text>
                       </Row>
                       {user ? (
-                         <Row style={styles.formRow}>
                          <View>
-                            <Text>Welcome {user.email} from provider: {user.providerId}</Text>
-                            <Text style={styles.registerLink} onPress={handleLogout}> Log out</Text>
+                            <Text style={styles.formPwd}>Welcome {user.email} from: {user.providerId}</Text>
+                            <Text style={styles.registerLink} onPress={handleLogout}>Log out</Text>
                          </View>
-                     </Row>
                       ) : null}
                     </Col>
                 </Row>

@@ -11,14 +11,23 @@ export default StyleSheet.create({
     margin: 20,
     paddingHorizontal: 10,
     maxHeight: '70%',
-    minHeight: 400,
+    minHeight: 450,
   },
   mainformRow: {
-    height: 300,
+    height: 350,
   },
   formRow: {
     margin: 10,
     height: 45,
+  },
+  formRowLogout: {
+    margin: 10,
+    height: 20,
+  },
+  formPwd: {
+    textAlign: 'center',
+    color: 'grey',
+    width: '100%',
   },
   formTitle: {
     height: 50,
