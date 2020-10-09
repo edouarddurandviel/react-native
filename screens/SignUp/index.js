@@ -100,7 +100,7 @@ export default function LogInScreen({navigation}) {
                       </Row>
                       {user ? (
                          <View>
-                            <Text style={styles.formPwd}>Welcome {user.email} from: {user.providerId}</Text>
+                            <Text style={styles.formPwd}>Welcome {user.email} - from: {user.providerId}</Text>
                             <Text style={styles.registerLink} onPress={handleLogout}>Log out</Text>
                          </View>
                       ) : null}
