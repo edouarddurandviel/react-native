@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useEffect, useReducer, useContext } from 'react';
-import { FlatList, SafeAreaView, View } from 'react-native';
+import { FlatList, SafeAreaView, View} from 'react-native';
 
 import { firebaseService } from '../../services';
 import { UserContext } from '../../contexts';

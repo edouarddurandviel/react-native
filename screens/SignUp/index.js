@@ -92,7 +92,7 @@ export default function LogInScreen({navigation}) {
                               style={styles.signInButton}
                               onPress={handleLogin}
                             >
-                            <Text style={styles.signInButtonText}>Se connecter</Text>
+                            <Text style={styles.signInButtonText}>Login</Text>
                         </TouchableOpacity>
                       </Row>
                       <Row style={styles.formRow}>
