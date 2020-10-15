@@ -18,7 +18,6 @@ export default StyleSheet.create({
     zIndex: 2,
     position: 'absolute',
     bottom: 10,
-    color: 'white',
     left: 10,
   },
 });
