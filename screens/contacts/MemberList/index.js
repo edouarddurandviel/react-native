@@ -7,9 +7,8 @@ import styles from './styles';
 
 class ListScreen extends Component {
 
-  constructor( props ){
+  constructor(props){
     super(props);
-
     this.state = {
      loading: true,
      data: [],
@@ -50,7 +49,6 @@ class ListScreen extends Component {
 componentDidMount() {
   this._getUsers();
   this._clearLoader(3500);
-
 }
 
 keyExtractor = (item, index) => index.toString()
@@ -63,12 +61,16 @@ renderItem = ({ item }) => (
 render (){
   return (
           (this.state.loading === true) ?
+
             <ActivityIndicator style={styles.container} animating={this.state.animating} size="small" color="#0000ff" /> :
-            <View><FlatList
-              keyExtractor={this.keyExtractor}
-              data={this.state.data}
-              renderItem={this.renderItem}
-            /></View>
+
+            <View>
+              <FlatList
+                keyExtractor={this.keyExtractor}
+                data={this.state.data}
+                renderItem={this.renderItem}
+              />
+            </View>
         );
     }
 }

@@ -61,51 +61,51 @@ export default function LogInScreen({navigation}) {
       });
   };
 
-      return (
-        <Grid style={styles.formGrid}>
-                <Row style={styles.mainformRow}>
-                    <Col>
-                      <View><Text style={styles.formTitle}>LogIn</Text></View>
-                      <View><Text style={styles.formPwd}>email : user@user.com</Text></View>
-                      <View><Text style={styles.formPwd}>password : useruser</Text></View>
-                      <Row style={styles.formRow}>
-                        <TextInput
-                          placeholder={'email'}
-                          keyboardType={'email-address'}
-                          style={styles.inputs}
-                          onChangeText={setEmail}
-                          />
-                      </Row>
-                      <Row style={styles.formRow}>
-                        <TextInput
-                          placeholder={'password'}
-                          style={styles.inputs}
-                          onChangeText={setPassword}
-                          secureTextEntry
-                          />
-                      </Row>
-                      <Row style={styles.formRow}>
-                        <TouchableOpacity
-                              style={styles.signInButton}
-                              onPress={handleLogin}
-                            >
-                            <Text style={styles.signInButtonText}>Login</Text>
-                        </TouchableOpacity>
-                      </Row>
-                      <Row style={styles.formRow}>
-                        <Text style={styles.registerLink} onPress={() => navigation.navigate('SignInScreen')}>Create an account</Text>
-                      </Row>
-                      {user ? (
-                         <View>
-                            <Text style={styles.formPwd}>Welcome {user.email} - from: {user.providerId}</Text>
-                            <Text style={styles.registerLink} onPress={handleLogout}>Log out</Text>
-                         </View>
-                      ) : null}
-                    </Col>
-                </Row>
-            </Grid>
-      );
-    }
+  return (
+      <Grid style={styles.formGrid}>
+        <Row style={styles.mainformRow}>
+          <Col>
+            <View><Text style={styles.formTitle}>LogIn</Text></View>
+            <View><Text style={styles.formPwd}>email : user@user.com</Text></View>
+            <View><Text style={styles.formPwd}>password : useruser</Text></View>
+            <Row style={styles.formRow}>
+              <TextInput
+                placeholder={'email'}
+                keyboardType={'email-address'}
+                style={styles.inputs}
+                onChangeText={setEmail}
+                />
+            </Row>
+            <Row style={styles.formRow}>
+              <TextInput
+                placeholder={'password'}
+                style={styles.inputs}
+                onChangeText={setPassword}
+                secureTextEntry
+                />
+            </Row>
+            <Row style={styles.formRow}>
+              <TouchableOpacity
+                    style={styles.signInButton}
+                    onPress={handleLogin}
+                  >
+                  <Text style={styles.signInButtonText}>Login</Text>
+              </TouchableOpacity>
+            </Row>
+            <Row style={styles.formRow}>
+              <Text style={styles.registerLink} onPress={() => navigation.navigate('SignInScreen')}>Create an account</Text>
+            </Row>
+            {user ? (
+                <View>
+                  <Text style={styles.formPwd}>Welcome {user.email} - from: {user.providerId}</Text>
+                  <Text style={styles.registerLink} onPress={handleLogout}>Log out</Text>
+                </View>
+            ) : null}
+          </Col>
+        </Row>
+      </Grid>
+    );
+  }
 
 
 
